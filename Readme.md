@@ -1,6 +1,6 @@
 ###################### EKS Create Cluster ##########################################################
 eksctl create cluster -f cluster.yaml
-aws eks update-kubeconfig --name <cluster name>
+aws eks update-kubeconfig --name fluxDemo
 ####################################################################################################
 
 1. Create Namespace
@@ -14,7 +14,7 @@ $env:TMP = "flux-system"
 
 4. Install Flux on EKS
 flux bootstrap github `
-  --owner="RekhuGopal" `
+  --owner="MaksimSevko" `
   --repository=AWS_EKS_Flux_GitOps `
   --branch=main `
   --path=".\apps" `
